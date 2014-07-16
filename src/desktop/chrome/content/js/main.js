@@ -104,8 +104,9 @@ function initInfoPanel(json) {
   var bytesSaved = getBandwidthSavedInMB(json).toFixed(2);
   bytesSavedEl.textContent = "About " + bytesSaved + " MB of bandwidth was saved";
 
-  var totalBytesSaved = getTotalBandwidthSavedInMB().toFixed(2);
+  var totalBytesSaved = getTotalBandwidthSavedInMB();
   if (totalBytesSaved != null) {
+    totalBytesSaved = totalBytesSaved.toFixed(2);
     totalBytesSavedEl.textContent = "Total bandwith saved: " + totalBytesSaved + " MB";
   }
 
